@@ -1,0 +1,14 @@
+.btn-icon {
+  background: transparent;
+  background-image: url("../../../assets/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid var(--primary-color);
+  border-radius: 100%;
+  padding: 14px;
+}
+
+.btn-unavailable {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

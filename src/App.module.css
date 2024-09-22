@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 16px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    row-gap: 8px;
+  }
+}

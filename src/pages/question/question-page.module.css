@@ -1,0 +1,27 @@
+.question-page-footer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.question-page-footer__number-of-question {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primary-color);
+}
+
+@media (max-width: 1279px) {
+  .question-page-footer {
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .question-page-footer__number-of-question {
+    font-size: 14px;
+    line-height: 1.28571;
+  }
+}

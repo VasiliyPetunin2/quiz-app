@@ -1,0 +1,35 @@
+.footer-text-info {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14286;
+  color: var(--bg-color);
+  margin: 0;
+}
+
+.footer-text-info__link {
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.footer-text-info__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--bg-color);
+}
+
+@media (max-width: 767px) {
+  .footer-text-info {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}

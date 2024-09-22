@@ -1,0 +1,19 @@
+.card {
+  width: 590px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  justify-items: center;
+  row-gap: 32px;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 32px 44px;
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 343px;
+    row-gap: 16px;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,93 @@
+.radio-hidden {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.answers__answer {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  background: transparent;
+  border: 4px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 12px 12px 12px 46px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primary-color);
+  text-align: start;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+#answers__highlighted-answer.answers__answer_correct {
+  border-color: var(--truth-color);
+  background-color: var(--truth-color);
+  color: var(--bg-color);
+}
+
+#answers__highlighted-answer.answers__answer_incorrect {
+  border-color: var(--false-color);
+  background-color: var(--false-color);
+  color: var(--bg-color);
+}
+
+#answers__highlighted-answer:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+
+#answers__highlighted-answer.answers__answer_incorrect:after {
+  background-image: url('../../assets/wrong-answer-cross.svg');
+}
+
+#answers__highlighted-answer.answers__answer_correct:after {
+  background-image: url('../../assets/right-answer-checkmark.svg');
+}
+
+.radio-hidden:checked + .answers__answer {
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+}
+
+.answers__answer:before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .answers__answer {
+    border-width: 2px;
+    padding: 10px 10px 10px 30px;
+    font-size: 14px;
+    line-height: 1.28571;
+  }
+
+  #answers__highlighted-answer:after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .answers__answer:before {
+    left: 12px;
+  }
+}

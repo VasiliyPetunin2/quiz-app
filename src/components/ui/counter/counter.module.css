@@ -1,0 +1,107 @@
+.counter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.btn-minus,
+.btn-plus {
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 4px solid var(--primary-color);
+  border-radius: 100%;
+  padding: 21px;
+  transition: border-color 0.5s, background-image 0.5s;
+}
+
+.btn-minus {
+  background-image: url("../../../assets/minus.svg");
+}
+
+.btn-minus:not(:disabled):hover,
+.btn-minus:not(:disabled):active {
+  border-color: var(--secondary-color);
+  background-image: url("../../../assets/minus-secondary.svg");
+}
+
+.btn-plus {
+  background-image: url("../../../assets/plus.svg");
+}
+
+.btn-plus:not(:disabled):hover,
+.btn-plus:not(:disabled):active {
+  border-color: var(--secondary-color);
+  background-image: url("../../../assets/plus-secondary.svg");
+}
+
+.counter__value {
+  width: 118px;
+  background: transparent;
+  border: 4px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 12px 0;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.22222;
+  color: var(--primary-color);
+  text-align: center;
+  outline: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  transition: border-color 0.5s, color 0.5s;
+}
+
+.counter__value::-webkit-inner-spin-button,
+.counter__value::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.counter__value:hover,
+.counter__value:focus,
+.counter__value:active {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+@media (max-width: 767px) {
+  .counter {
+    column-gap: 14px;
+  }
+
+  .btn-minus,
+  .btn-plus {
+    border-width: 2px;
+    padding: 15px;
+  }
+
+  .btn-minus {
+    background-image: url("../../../assets/minus-mobile.svg");
+  }
+
+  .btn-minus:not(:disabled):hover,
+  .btn-minus:not(:disabled):active {
+    border-color: var(--secondary-color);
+    background-image: url("../../../assets/minus-secondary-mobile.svg");
+  }
+
+  .btn-plus {
+    background-image: url("../../../assets/plus-mobile.svg");
+  }
+
+  .btn-plus:not(:disabled):hover,
+  .btn-plus:not(:disabled):active {
+    border-color: var(--secondary-color);
+    background-image: url("../../../assets/plus-secondary-mobile.svg");
+  }
+
+  .counter__value {
+    width: 88px;
+    font-size: 24px;
+    line-height: 1.16667;
+    border-width: 2px;
+    padding: 10px 0;
+  }
+}

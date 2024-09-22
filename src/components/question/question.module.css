@@ -1,0 +1,39 @@
+.question-text {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  row-gap: 16px;
+  margin: 0;
+}
+
+.question-flag {
+  width: 90px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.paragraph {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.14286;
+  color: var(--primary-color);
+}
+
+@media (max-width: 767px) {
+  .question-text {
+    row-gap: 8px;
+  }
+
+  .question-flag {
+    width: 72px;
+    height: 48px;
+  }
+
+  .paragraph {
+    font-size: 18px;
+    line-height: 1.22222;
+  }
+}

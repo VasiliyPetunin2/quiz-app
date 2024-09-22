@@ -1,0 +1,51 @@
+.result {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 16px;
+  align-items: center;
+}
+
+.result__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.22222;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.result__paragraph {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.14286;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 0;
+}
+
+.result__paragraph_true {
+  font-weight: 700;
+  color: var(--truth-color);
+}
+
+.result__paragraph_false {
+  font-weight: 700;
+  color: var(--false-color);
+}
+
+@media (max-width: 767px) {
+  .result {
+    row-gap: 8px;
+  }
+
+  .result__title {
+    font-size: 24px;
+    line-height: 1.16667;
+  }
+
+  .result__paragraph {
+    font-size: 18px;
+    line-height: 1.22222;
+  }
+}

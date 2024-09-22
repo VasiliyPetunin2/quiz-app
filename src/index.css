@@ -1,0 +1,35 @@
+@import "normalize.css";
+
+:root {
+  --font-family: "Inter", sans-serif;
+  --bg-color: #F1F1EF;
+  --primary-color: #125365;
+  --secondary-color: #FF9C46;
+  --truth-color: #2a8f55;
+  --false-color: #df4c25;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/quiz-app-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 32px;
+}
+
+@media (max-width: 1279px) {
+  #root {
+    background-position: center;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  #root {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,42 @@
+.loader {
+  width: min-content;
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 16px;
+  padding: 0 11px;
+}
+
+.loader__circle {
+  border-radius: 100%;
+  animation: move-up-and-down 0.5s infinite;
+}
+
+@keyframes move-up-and-down {
+  0%, 20%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+}
+
+#circle-first {
+  animation-delay: 0ms;
+}
+
+#circle-second {
+  animation-delay: 50ms;
+}
+
+#circle-third {
+  animation-delay: 100ms;
+}
+
+@media (max-width: 767px) {
+  .loader {
+    column-gap: 12px;
+  }
+}
